@@ -16,35 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `userdetails`
+-- Table structure for table `schedules`
 --
 
-DROP TABLE IF EXISTS `userdetails`;
+DROP TABLE IF EXISTS `schedules`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `userdetails` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) DEFAULT NULL,
-  `emailid` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `roleid` int(10) unsigned NOT NULL,
-  `mobilenumber` varchar(15) DEFAULT NULL,
-  `createdtimestamp` bigint(20) unsigned NOT NULL,
-  `modifiedtimestamp` bigint(20) NOT NULL,
-  `hashkey` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `roleid_idx` (`roleid`),
-  CONSTRAINT `roleid` FOREIGN KEY (`roleid`) REFERENCES `userroles` (`id`)
+CREATE TABLE `schedules` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `groupkey` varchar(45) NOT NULL,
+  `jobkey` varchar(45) NOT NULL,
+  `description` varchar(45) NOT NULL,
+  `classname` varchar(45) NOT NULL,
+  `cronexpression` varchar(45) NOT NULL,
+  `status` int(11) NOT NULL,
+  `createdtimestamp` varchar(45) NOT NULL,
+  `modifiedtimestamp` varchar(45) NOT NULL,
+  `hashkey` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `userdetails`
+-- Dumping data for table `schedules`
 --
 
-LOCK TABLES `userdetails` WRITE;
-/*!40000 ALTER TABLE `userdetails` DISABLE KEYS */;
-/*!40000 ALTER TABLE `userdetails` ENABLE KEYS */;
+LOCK TABLES `schedules` WRITE;
+/*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
+/*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

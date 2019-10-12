@@ -25,7 +25,9 @@ DROP TABLE IF EXISTS `devicedetails`;
 CREATE TABLE `devicedetails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `deviceid` int(11) NOT NULL,
+  `type` int(11) NOT NULL,
   `devicedesc` varchar(50) NOT NULL,
+  `deleted` int(11) NOT NULL,
   `baudrate` int(11) NOT NULL,
   `wordlength` smallint(5) NOT NULL,
   `stopbit` smallint(5) NOT NULL,
@@ -60,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-07 15:09:04
+-- Dump completed on 2019-10-12 14:34:58
