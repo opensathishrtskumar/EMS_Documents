@@ -36,7 +36,7 @@ CREATE TABLE `userdetails` (
   PRIMARY KEY (`id`),
   KEY `roleid_idx` (`roleid`),
   CONSTRAINT `roleid` FOREIGN KEY (`roleid`) REFERENCES `userroles` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,6 +45,7 @@ CREATE TABLE `userdetails` (
 
 LOCK TABLES `userdetails` WRITE;
 /*!40000 ALTER TABLE `userdetails` DISABLE KEYS */;
+INSERT INTO `userdetails` VALUES (1,'Sathish','sathishrtskumar@gmail.com','LoNqQADDlyE=',1,'9884213333',1,1570872685185,1570872685185,'hashkey');
 /*!40000 ALTER TABLE `userdetails` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-12 14:50:26
+-- Dump completed on 2019-10-12 15:08:32
