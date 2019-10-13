@@ -31,7 +31,7 @@ CREATE TABLE `settings` (
   `modifiedtimestamp` bigint(15) NOT NULL,
   `hashkey` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `settings` (
 
 LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
+INSERT INTO `settings` VALUES (1,'EMAIL','smtp.host','smtp.gmail.com',1570937896273,1570937896273,'hashkey'),(2,'EMAIL','smtp.port','587',1570937896273,1570937896273,'hashkey'),(3,'EMAIL','smtp.username','ems.ses03@gmail.com',1570937896273,1570937896273,'hashkey'),(4,'EMAIL','smtp.password','kavi071215',1570937896273,1570937896273,'hashkey'),(5,'EMAIL','smtp.bcc.mail','ems.ses03@gmail.com',1570937896273,1570937896273,'hashkey'),(6,'EMAIL','smtp.cc.mail','ems.ses03@gmail.com',1570937896273,1570937896273,'hashkey'),(7,'EMAIL','smtp.to.mail','ems.ses03@gmail.com',1570937896273,1570937896273,'hashkey');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-12 17:48:42
+-- Dump completed on 2019-10-13 10:04:35
