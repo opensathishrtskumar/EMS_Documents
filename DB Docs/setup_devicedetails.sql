@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `setup` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `setup`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: setup
@@ -25,22 +27,21 @@ DROP TABLE IF EXISTS `devicedetails`;
 CREATE TABLE `devicedetails` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `deviceid` int(11) NOT NULL,
-  `type` int(11) NOT NULL,
   `devicedesc` varchar(50) NOT NULL,
-  `deleted` int(11) NOT NULL,
   `baudrate` int(11) NOT NULL,
   `wordlength` smallint(5) NOT NULL,
   `stopbit` smallint(5) NOT NULL,
   `parity` varchar(10) NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `registermapping` varchar(5) NOT NULL,
   `port` varchar(5) NOT NULL,
   `method` varchar(5) NOT NULL,
+  `registermapping` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `type` int(11) NOT NULL,
+  `deleted` int(11) NOT NULL,
   `createdtimestamp` bigint(15) NOT NULL,
   `modifiedtimestamp` bigint(15) NOT NULL,
   `hashkey` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `deviceid_UNIQUE` (`deviceid`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-13 10:04:35
+-- Dump completed on 2019-10-13 10:48:37
