@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `setup` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `setup`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: setup
@@ -34,10 +32,9 @@ CREATE TABLE `devicedetails` (
   `parity` varchar(10) NOT NULL,
   `port` varchar(5) NOT NULL,
   `method` varchar(5) NOT NULL,
-  `registermapping` int(11) NOT NULL,
+  `registermapping` varchar(5) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `type` int(11) NOT NULL,
-  `deleted` int(11) NOT NULL,
   `createdtimestamp` bigint(15) NOT NULL,
   `modifiedtimestamp` bigint(15) NOT NULL,
   `hashkey` varchar(50) NOT NULL,
@@ -53,6 +50,14 @@ LOCK TABLES `devicedetails` WRITE;
 /*!40000 ALTER TABLE `devicedetails` DISABLE KEYS */;
 /*!40000 ALTER TABLE `devicedetails` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'setup'
+--
+
+--
+-- Dumping routines for database 'setup'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -63,4 +68,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-13 10:48:37
+-- Dump completed on 2019-10-15 20:03:08
