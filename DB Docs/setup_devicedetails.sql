@@ -33,7 +33,7 @@ CREATE TABLE `devicedetails` (
   `port` varchar(5) NOT NULL,
   `method` varchar(5) NOT NULL,
   `registermapping` varchar(5) NOT NULL,
-  `emcoding` varchar(5) NOT NULL,
+  `encoding` varchar(5) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `type` int(11) NOT NULL,
   `createdtimestamp` bigint(15) NOT NULL,
