@@ -33,13 +33,14 @@ CREATE TABLE `devicedetails` (
   `port` varchar(5) NOT NULL,
   `method` varchar(5) NOT NULL,
   `registermapping` varchar(5) NOT NULL,
+  `emcoding` varchar(5) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `type` int(11) NOT NULL,
   `createdtimestamp` bigint(15) NOT NULL,
   `modifiedtimestamp` bigint(15) NOT NULL,
   `hashkey` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,4 +69,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-15 20:03:08
+-- Dump completed on 2019-10-24 16:55:35
