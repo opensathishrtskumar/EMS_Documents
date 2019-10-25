@@ -29,7 +29,7 @@ CREATE TABLE `schedules` (
   `groupkey` varchar(45) NOT NULL,
   `jobkey` varchar(45) NOT NULL,
   `description` varchar(45) NOT NULL,
-  `classname` varchar(45) NOT NULL,
+  `classname` varchar(150) NOT NULL,
   `cronexpression` varchar(45) NOT NULL,
   `status` int(11) NOT NULL,
   `createdtimestamp` varchar(45) NOT NULL,
