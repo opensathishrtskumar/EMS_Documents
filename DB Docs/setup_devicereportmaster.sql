@@ -16,36 +16,29 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `schedules`
+-- Table structure for table `devicereportmaster`
 --
 
-DROP TABLE IF EXISTS `schedules`;
+DROP TABLE IF EXISTS `devicereportmaster`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `schedules` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `groupkey` varchar(45) NOT NULL,
-  `jobkey` varchar(45) NOT NULL,
-  `description` varchar(45) NOT NULL,
-  `classname` varchar(150) NOT NULL,
-  `cronexpression` varchar(45) NOT NULL,
-  `type` int(2) NOT NULL,
-  `status` int(11) NOT NULL,
+CREATE TABLE `devicereportmaster` (
+  `id` int(11) NOT NULL,
+  `deviceid` int(11) NOT NULL,
+  `type` int(11) NOT NULL,
+  `status` int(11) DEFAULT NULL,
   `createdtimestamp` bigint(20) NOT NULL,
-  `modifiedtimestamp` bigint(20) NOT NULL,
-  `hashkey` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`,`classname`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `schedules`
+-- Dumping data for table `devicereportmaster`
 --
 
-LOCK TABLES `schedules` WRITE;
-/*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (1,'SAMPLE','SAMPLE','Sample JOB','org.lemma.ems.scheduler.jobs.SampleCronJob','0/30 * * * * ?',1,2,123123123,123123,'hashkey'),(2,'POLL','DEVICEPOLLER','Polls EMS Devices','org.lemma.ems.scheduler.jobs.OneTimeTriggerPollingJob','*',3,2,121132321,3211321,'sdfsd');
-/*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
+LOCK TABLES `devicereportmaster` WRITE;
+/*!40000 ALTER TABLE `devicereportmaster` DISABLE KEYS */;
+/*!40000 ALTER TABLE `devicereportmaster` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -65,4 +58,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-07 18:49:46
+-- Dump completed on 2019-11-07 19:16:46
