@@ -29,6 +29,7 @@ CREATE TABLE `schedules` (
   `description` varchar(45) NOT NULL,
   `classname` varchar(150) NOT NULL,
   `cronexpression` varchar(45) NOT NULL,
+  `type` int(2) NOT NULL,
   `status` int(11) NOT NULL,
   `createdtimestamp` varchar(45) NOT NULL,
   `modifiedtimestamp` varchar(45) NOT NULL,
@@ -43,7 +44,7 @@ CREATE TABLE `schedules` (
 
 LOCK TABLES `schedules` WRITE;
 /*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (1,'SAMPLE','SAMPLE','Sample JOB','org.lemma.ems.scheduler.jobs.SampleCronJob','0/30 * * * * ?',2,'123123123','123123','hashkey'),(2,'POLL','DEVICEPOLLER','Polls EMS Devices','org.lemma.ems.scheduler.jobs.OneTimeTriggerPollingJob','*',2,'121132321','3211321','sdfsd');
+INSERT INTO `schedules` VALUES (1,'SAMPLE','SAMPLE','Sample JOB','org.lemma.ems.scheduler.jobs.SampleCronJob','0/30 * * * * ?',1,2,'123123123','123123','hashkey'),(2,'POLL','DEVICEPOLLER','Polls EMS Devices','org.lemma.ems.scheduler.jobs.OneTimeTriggerPollingJob','*',3,2,'121132321','3211321','sdfsd');
 /*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
 UNLOCK TABLES;
 
