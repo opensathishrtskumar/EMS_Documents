@@ -28,7 +28,8 @@ CREATE TABLE `devicereportmaster` (
   `type` int(11) NOT NULL,
   `status` int(11) DEFAULT NULL,
   `createdtimestamp` bigint(20) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `deviceid_UNIQUE` (`deviceid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-07 19:16:46
+-- Dump completed on 2019-11-07 19:29:23
