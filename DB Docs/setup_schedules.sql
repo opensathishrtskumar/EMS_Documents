@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `setup` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `setup`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: setup
@@ -35,8 +33,8 @@ CREATE TABLE `schedules` (
   `createdtimestamp` varchar(45) NOT NULL,
   `modifiedtimestamp` varchar(45) NOT NULL,
   `hashkey` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`,`classname`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -45,9 +43,17 @@ CREATE TABLE `schedules` (
 
 LOCK TABLES `schedules` WRITE;
 /*!40000 ALTER TABLE `schedules` DISABLE KEYS */;
-INSERT INTO `schedules` VALUES (1,'SAMPLE','SAMPLE','Sample JOB','org.lemma.ems.scheduler.jobs.SampleCronJob','0/59 * * * * ?',1,'123123123','123123','hashkey');
+INSERT INTO `schedules` VALUES (1,'SAMPLE','SAMPLE','Sample JOB','org.lemma.ems.scheduler.jobs.SampleCronJob','0/30 * * * * ?',2,'123123123','123123','hashkey'),(2,'POLL','DEVICEPOLLER','Polls EMS Devices','org.lemma.ems.scheduler.jobs.OneTimeTriggerPollingJob','*',2,'121132321','3211321','sdfsd');
 /*!40000 ALTER TABLE `schedules` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'setup'
+--
+
+--
+-- Dumping routines for database 'setup'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -58,4 +64,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-10-13 10:48:37
+-- Dump completed on 2019-11-07 18:49:46
