@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `devicereportmaster`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `devicereportmaster` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `deviceid` int(11) NOT NULL,
   `type` int(11) NOT NULL,
   `status` int(11) DEFAULT NULL,
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-07 19:29:23
+-- Dump completed on 2019-11-09 14:05:57
